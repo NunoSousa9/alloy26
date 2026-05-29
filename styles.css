@@ -264,11 +264,15 @@ h1 {
   line-height: 1.65;
 }
 
+.screenshot-showcase {
+  margin-top: 2rem;
+}
+
 .screenshot-grid {
   display: grid;
-  grid-template-columns: 1fr;
-  gap: 1.4rem;
-  margin-top: 2rem;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.2rem;
+  margin-top: 1.2rem;
 }
 
 .screenshot-card {
@@ -285,6 +289,14 @@ h1 {
   display: block;
   opacity: 0.96;
   transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+.screenshot-main img {
+  width: 100%;
+}
+
+.screenshot-main {
+  display: block;
 }
 
 .screenshot-card:hover img {
