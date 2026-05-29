@@ -62,10 +62,12 @@ a {
 }
 
 .brand-logo {
-  width: 44px;
-  height: 44px;
+  width: 42px;
+  height: 42px;
   object-fit: contain;
-  filter: drop-shadow(0 0 16px rgba(32, 230, 255, 0.45));
+  border-radius: 10px;
+  display: block;
+  filter: drop-shadow(0 0 14px rgba(32, 230, 255, 0.4));
 }
 
 nav {
@@ -264,31 +266,29 @@ h1 {
 
 .screenshot-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 1.2rem;
+  grid-template-columns: 1fr;
+  gap: 1.4rem;
   margin-top: 2rem;
 }
 
 .screenshot-card {
   margin: 0;
-  min-height: 260px;
   color: var(--muted);
   overflow: hidden;
   position: relative;
+  background: rgba(7, 18, 32, 0.86);
 }
 
 .screenshot-card img {
   width: 100%;
-  height: 100%;
-  min-height: 260px;
-  object-fit: cover;
+  height: auto;
   display: block;
   opacity: 0.96;
   transition: transform 0.25s ease, opacity 0.25s ease;
 }
 
 .screenshot-card:hover img {
-  transform: scale(1.025);
+  transform: scale(1.015);
   opacity: 1;
 }
 
