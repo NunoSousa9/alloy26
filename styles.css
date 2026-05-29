@@ -242,7 +242,8 @@ h1 {
 .feature-grid article,
 .download-box,
 .faq details,
-.screenshot-card {
+.screenshot-card,
+.about-card {
   border: 1px solid var(--border);
   background: var(--card);
   border-radius: 18px;
@@ -349,6 +350,26 @@ h1 {
 .support p {
   color: var(--muted);
   line-height: 1.7;
+}
+
+.about-card {
+  margin-top: 1.4rem;
+  max-width: 860px;
+  padding: 1.5rem;
+}
+
+.about-card p {
+  color: var(--muted);
+  line-height: 1.75;
+}
+
+.about-card p:first-child {
+  color: #dcecff;
+}
+
+.about-card a {
+  color: var(--cyan);
+  font-weight: 800;
 }
 
 .faq details {
