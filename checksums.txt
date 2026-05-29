@@ -1,0 +1,10 @@
+AllOY26 checksums
+
+Public release coming soon.
+
+When the final Windows installer is published, its SHA256 checksum will appear here.
+
+Example format:
+
+File: AllOY26-Setup-v1.0.0.exe
+SHA256: <pending>
