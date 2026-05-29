@@ -1,10 +1,11 @@
 AllOY26 checksums
 
-Public release coming soon.
+Version: v0.1.0
+Release type: early public release / release candidate
 
-When the final Windows installer is published, its SHA256 checksum will appear here.
+File: AllOY26 Setup 0.1.0.exe
+SHA256: 85FBBA5B8FD741C871379E48B82E9261B6D9872C48DCA04C6A7CB0FFFE33A43B
 
-Example format:
-
-File: AllOY26-Setup-v1.0.0.exe
-SHA256: <pending>
+Notes:
+This is an early public release candidate build.
+The app works, but small UI/content adjustments may still be made before the final public release.
