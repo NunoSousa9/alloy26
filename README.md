@@ -22,12 +22,6 @@ It lets you import Betfair CSV files, track matches and markets, analyse exposur
 
 https://nunosousa9.github.io/alloy26/
 
-## Status
-
-Public release coming soon.
-
-The final release will be distributed through GitHub Releases and will include a SHA256 checksum for file verification.
-
 ## Contact
 
 Project contact: alloy26app@gmail.com
