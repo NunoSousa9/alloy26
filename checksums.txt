@@ -4,7 +4,7 @@ Version: v0.1.0
 Release type: early public release / release candidate
 
 File: AllOY26 Setup 0.1.0.exe
-SHA256: 5E534503B971280FA2E0571C909DADC9CC27D56E1E421606BBC68294B465FAF8
+SHA256: C766A81CE2966D5AA7D7858EC7C93C5ADD5D3E8E738AA240383716B374349908
 
 Notes:
 This is an early public release candidate build.
