@@ -72,6 +72,7 @@ a {
 
 nav {
   display: flex;
+  align-items: center;
   gap: 1.4rem;
   color: var(--muted);
   font-size: 0.94rem;
@@ -79,6 +80,28 @@ nav {
 
 nav a:hover {
   color: var(--cyan);
+}
+
+.language-picker {
+  position: relative;
+}
+
+.language-picker select {
+  min-height: 34px;
+  width: 58px;
+  padding: 0 1.6rem 0 0.65rem;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: rgba(7, 18, 32, 0.82);
+  color: var(--text);
+  font: inherit;
+  cursor: pointer;
+  outline: none;
+}
+
+.language-picker select:hover,
+.language-picker select:focus {
+  border-color: var(--cyan);
 }
 
 main {
@@ -135,15 +158,16 @@ main {
 }
 
 h1 {
-  max-width: 1050px;
+  max-width: 980px;
   margin: 0;
-  font-size: clamp(3.2rem, 8vw, 7.7rem);
-  line-height: 0.92;
-  letter-spacing: -0.07em;
+  font-size: clamp(2.8rem, 6.7vw, 6.2rem);
+  line-height: 1.02;
+  letter-spacing: -0.045em;
   background: linear-gradient(90deg, #eaffff, var(--cyan), var(--blue), var(--violet));
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
+  padding-bottom: 0.08em;
 }
 
 .hero-text {
@@ -154,12 +178,25 @@ h1 {
   line-height: 1.7;
 }
 
+.hero-note {
+  max-width: 720px;
+  margin: 1.25rem auto 0;
+  color: var(--muted);
+  font-size: 0.96rem;
+  line-height: 1.6;
+}
+
+.hero-note a {
+  color: var(--cyan);
+  font-weight: 800;
+}
+
 .hero-actions {
   display: flex;
   justify-content: center;
   gap: 1rem;
   flex-wrap: wrap;
-  margin-top: 2.3rem;
+  margin-top: 2.1rem;
 }
 
 .btn {
@@ -271,7 +308,7 @@ h1 {
 
 .screenshot-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 1.2rem;
   margin-top: 1.2rem;
 }
@@ -309,14 +346,30 @@ h1 {
   position: absolute;
   left: 1rem;
   bottom: 1rem;
-  padding: 0.45rem 0.7rem;
-  border-radius: 999px;
+  max-width: min(520px, calc(100% - 2rem));
+  padding: 0.7rem 0.85rem;
+  border-radius: 14px;
   background: rgba(2, 7, 15, 0.78);
   border: 1px solid var(--border);
   color: #e8f7ff;
-  font-size: 0.86rem;
-  font-weight: 800;
   backdrop-filter: blur(10px);
+}
+
+.screenshot-card figcaption strong,
+.screenshot-card figcaption span {
+  display: block;
+}
+
+.screenshot-card figcaption strong {
+  font-size: 0.92rem;
+  font-weight: 900;
+}
+
+.screenshot-card figcaption span {
+  margin-top: 0.25rem;
+  color: #b7cbe0;
+  font-size: 0.78rem;
+  line-height: 1.45;
 }
 
 .placeholder {
@@ -334,7 +387,6 @@ h1 {
 .download-box {
   margin-top: 1.4rem;
   padding: 1.5rem;
-  max-width: 760px;
 }
 
 .status {
@@ -346,15 +398,13 @@ h1 {
   letter-spacing: 0.12em;
 }
 
-.download p,
-.support p {
+.download p {
   color: var(--muted);
   line-height: 1.7;
 }
 
 .about-card {
   margin-top: 1.4rem;
-  max-width: 860px;
   padding: 1.5rem;
 }
 
@@ -365,6 +415,14 @@ h1 {
 
 .about-card p:first-child {
   color: #dcecff;
+}
+
+.about-actions {
+  margin: 1.25rem 0 1.4rem;
+}
+
+.about-card .btn {
+  color: var(--text);
 }
 
 .about-card a {

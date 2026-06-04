@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>AllOY26 — Analista Offline de Trading para el Mundial</title>
+
+  <meta
+    name="description"
+    content="AllOY26 es una aplicación gratuita y offline para analizar trading del Mundial mediante CSVs de Betfair. Sin cuenta, sin cloud y sin suscripción."
+  />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="brand">
+      <img class="brand-logo" src="assets/logo.png" alt="Logotipo AllOY26">
+      <span>AllOY26</span>
+    </div>
+
+    <nav>
+      <a href="#features">Funcionalidades</a>
+      <a href="#screenshots">Screenshots</a>
+      <a href="#about">Sobre</a>
+      <a href="#faq">FAQ</a>
+      <a href="#download">Versión</a>
+      <label class="language-picker" aria-label="Elegir idioma">
+        <select onchange="window.location.href = this.value">
+          <option value="index.html">🇵🇹</option>
+          <option value="en.html">🇬🇧</option>
+          <option value="es.html" selected>🇪🇸</option>
+        </select>
+      </label>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-glow"></div>
+
+      <p class="eyebrow">Gratis • Offline • Betfair CSV • Solo Mundial</p>
+
+      <h1>Tu Mundial,<br>Offline.</h1>
+
+      <p class="hero-text">
+        Importa tus CSVs de Betfair, sigue cada partido, mercado y analiza tu
+        trading del Mundial localmente — sin registro, sin cloud y sin suscripción.
+      </p>
+
+      <div class="hero-actions">
+        <a class="btn primary" href="https://github.com/NunoSousa9/alloy26/releases/download/v0.1.0/AllOY26.Setup.0.1.0.exe">
+          Descarga gratis para Windows
+        </a>
+        <a class="btn secondary" href="https://github.com/NunoSousa9/alloy26/releases/download/v0.1.0/ExchangeSettledBets_WCsample.csv">
+          Descargar CSV de ejemplo
+        </a>
+      </div>
+
+      <p class="hero-note">
+        ¿Eres cliente de Oddjusta o de otra casa de exchange?
+        <a href="mailto:alloy26app@gmail.com">Habla conmigo</a> para intentar adaptar la app.
+      </p>
+
+      <div class="trust-row">
+        <span>Sin login</span>
+        <span>Sin tracking</span>
+        <span>Sin cloud</span>
+        <span>PT / EN / ES</span>
+      </div>
+
+      <p class="tagline">All Offline. All Yours.</p>
+    </section>
+
+    <section id="features" class="section">
+      <h2>Construida para el Mundial</h2>
+
+      <p class="section-intro">
+        AllOY26 no es un tracker genérico de apuestas. Es un workspace de análisis
+        centrado en el Mundial, construido alrededor de partidos, grupos, eliminatorias,
+        mercados, estrategias e historial Betfair en CSV.
+      </p>
+
+      <div class="feature-grid">
+        <article>
+          <h3>Importación de CSVs Betfair</h3>
+          <p>
+            Importa apuestas resueltas o historial de apuestas de Betfair y valida
+            los datos contra el calendario del Mundial existente en la aplicación.
+          </p>
+        </article>
+
+        <article>
+          <h3>Análisis de mercados</h3>
+          <p>
+            Revisa P/L, ROI, rangos de cuotas, volumen, rankings de mercados,
+            scatter plots y detalles aislados por mercado.
+          </p>
+        </article>
+
+        <article>
+          <h3>Reconstrucción del trabajo</h3>
+          <p>
+            Ve cómo cada back y lay alteró tu exposición en cada selección
+            a lo largo de la timeline de un partido.
+          </p>
+        </article>
+
+        <article>
+          <h3>Seguimiento del torneo</h3>
+          <p>
+            Sigue grupos, jornadas, fases eliminatorias y una llave KO rellenada
+            por el usuario que crea futuros partidos dentro de la app.
+          </p>
+        </article>
+
+        <article>
+          <h3>Comparación de estrategias</h3>
+          <p>
+            Crea estrategias, asocia mercados automáticamente y compara resultados
+            por P/L, ROI, tasa de acierto, drawdown y otras métricas.
+          </p>
+        </article>
+
+        <article>
+          <h3>Anónimo</h3>
+          <p>
+            Todo corre en tu ordenador. La app no tiene login, no tiene conexión a internet,
+            no tiene conexión a Betfair ni comparte tus datos.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section id="screenshots" class="section screenshots">
+      <h2>Screenshots</h2>
+
+      <p class="section-intro">
+        Pantallas reales de la aplicación con datos ficticios de ejemplo: dashboard,
+        torneo, reconstrucción de posición y estrategias. Haz clic en cualquier
+        screenshot para abrirlo a tamaño completo.
+      </p>
+
+      <div class="screenshot-showcase">
+        <a class="screenshot-card screenshot-main" href="assets/visual-modes.png" target="_blank" rel="noopener">
+          <img src="assets/visual-modes.png" alt="Dashboard AllOY26 dividido en cinco modos visuales">
+          <figcaption>
+            <strong>5 modos visuales</strong>
+            <span>Dark, Light, Classic, Dual y Teal para trabajar en el ambiente que prefieras.</span>
+          </figcaption>
+        </a>
+
+        <div class="screenshot-grid">
+          <a class="screenshot-card" href="assets/import-guided.png" target="_blank" rel="noopener">
+            <img src="assets/import-guided.png" alt="Importador AllOY26 con preview e instrucciones para obtener CSV Betfair">
+            <figcaption>
+              <strong>Importación guiada</strong>
+              <span>Importa CSVs Betfair con preview e instrucciones para obtener el fichero correcto.</span>
+            </figcaption>
+          </a>
+
+          <a class="screenshot-card" href="assets/tournament.png" target="_blank" rel="noopener">
+            <img src="assets/tournament.png" alt="Área de torneo del Mundial en AllOY26">
+            <figcaption>
+              <strong>Workspace del Mundial</strong>
+              <span>Grupos, calendario, fases y futuros partidos creados por la llave KO.</span>
+            </figcaption>
+          </a>
+
+          <a class="screenshot-card" href="assets/position-analysis.png" target="_blank" rel="noopener">
+            <img src="assets/position-analysis.png" alt="Análisis de posición y exposición en AllOY26">
+            <figcaption>
+              <strong>Análisis de posición</strong>
+              <span>Reconstrucción de la exposición por selección, minuto, apuesta y mercado.</span>
+            </figcaption>
+          </a>
+
+          <a class="screenshot-card" href="assets/strategies.png" target="_blank" rel="noopener">
+            <img src="assets/strategies.png" alt="Página de estadísticas de estrategias en AllOY26">
+            <figcaption>
+              <strong>Estrategias</strong>
+              <span>Comparación de sistemas por P/L, ROI, win rate, drawdown y aplicaciones.</span>
+            </figcaption>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section about">
+      <h2>Creado de forma independiente</h2>
+
+      <div class="about-card">
+        <p>
+          Hola, soy Nuno, full-stack developer. Creé AllOY26 de forma totalmente
+          independiente como una herramienta gratuita y offline para análisis de
+          trading en el Mundial.
+        </p>
+
+        <p>
+          AllOY26 fue diseñado, desarrollado y probado como un producto desktop
+          completo, pensado para importar, organizar y analizar datos localmente.
+        </p>
+
+        <p>
+          La app es 100% gratuita y anónima. No hay registros, suscripciones,
+          funcionalidades bloqueadas ni grupos privados. Si la app te ayuda y
+          quieres reconocer el trabajo detrás de ella, puedes hacer una donación
+          voluntaria.
+        </p>
+
+        <div class="about-actions">
+          <a class="btn secondary" href="https://www.paypal.com/paypalme/AllOYApp" target="_blank" rel="noopener">
+            Apoyar vía PayPal
+          </a>
+        </div>
+
+        <p>
+          Contacto del proyecto:
+          <a href="mailto:alloy26app@gmail.com">alloy26app@gmail.com</a>
+        </p>
+      </div>
+    </section>
+
+    <section id="faq" class="section faq">
+      <h2>FAQ</h2>
+
+      <details>
+        <summary>¿AllOY26 es gratuito?</summary>
+        <p>Sí. La aplicación es gratuita para descargar y usar.</p>
+      </details>
+
+      <details>
+        <summary>¿Necesita cuenta?</summary>
+        <p>No. No existe login, sistema de cuentas ni registro.</p>
+      </details>
+
+      <details>
+        <summary>¿La app envía mis datos a algún servidor?</summary>
+        <p>No. AllOY26 es offline. Tus CSVs y datos se quedan en tu ordenador.</p>
+      </details>
+
+      <details>
+        <summary>¿Es solo para el Mundial?</summary>
+        <p>
+          Sí. AllOY26 fue construido específicamente para la estructura, calendario,
+          grupos y fases eliminatorias del Mundial.
+        </p>
+      </details>
+
+      <details>
+        <summary>¿Con qué ficheros funciona?</summary>
+        <p>
+          La aplicación fue pensada para importar CSVs de Betfair relacionados con
+          apuestas y mercados del Mundial.
+        </p>
+      </details>
+
+      <details>
+        <summary>¿Por qué Windows muestra un aviso?</summary>
+        <p>
+          Como AllOY26 es una app indie nueva y todavía no tiene certificado de firma
+          digital, Windows SmartScreen puede mostrar un aviso en la primera instalación.
+          Esto es común en aplicaciones nuevas de desarrolladores independientes.
+        </p>
+        <p>
+          Para instalar, haz clic en "Más información" y después en "Ejecutar de todos modos".
+          También puedes verificar la integridad del fichero mediante el SHA256 publicado
+          en la sección Versión.
+        </p>
+      </details>
+
+    </section>
+
+    <section id="download" class="section download">
+      <h2>Versión</h2>
+    
+      <p>
+        Información de la release pública para Windows. Las descargas principales
+        están en la parte superior de la página.
+      </p>
+    
+      <div class="download-box">
+        <p class="status">Versión pública</p>
+    
+        <p>
+          AllOY26 es una aplicación desktop gratuita y offline. No necesitas crear
+          cuenta, subir ficheros a la cloud ni conectar la app a tu Betfair.
+        </p>
+    
+        <p>
+          <strong>Versión:</strong> v0.1.0
+        </p>
+    
+        <p>
+          <strong>Fichero:</strong> AllOY26.Setup.0.1.0.exe
+        </p>
+    
+        <p>
+          <strong>SHA256:</strong>
+          <code>C766A81CE2966D5AA7D7858EC7C93C5ADD5D3E8E738AA240383716B374349908</code>
+        </p>
+    
+        <p>
+          El SHA256 queda publicado para quien quiera confirmar que el instalador
+          descargado corresponde exactamente al fichero de la release.
+        </p>
+    
+        <p>
+          Como la aplicación todavía no está firmada digitalmente, Windows SmartScreen
+          puede mostrar un aviso en la primera instalación. Consulta la FAQ de arriba
+          para saber cómo proceder.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>AllOY26 — All Offline. All Yours.</p>
+    <p>Creado por Nuno Sousa • Contacto: alloy26app@gmail.com</p>
+  </footer>
+</body>
+</html>
