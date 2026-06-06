@@ -93,7 +93,9 @@
         <article>
           <h3>Import Betfair CSVs</h3>
           <p>
-            Import settled bets or betting history from Betfair and validate the data against the World Cup calendar inside the app. Tested with +30k bets and +2k markets across all 104 matches.
+            Import settled bets or betting history from Betfair. Tested with +30k
+            bets and +2k markets across all 104 matches. Supports the main match
+            markets. <a href="#supported-markets">See FAQ</a>
           </p>
         </article>
 
@@ -260,6 +262,22 @@
         </p>
       </details>
 
+      <details id="supported-markets">
+        <summary>Which Betfair markets are supported?</summary>
+        <p>
+          AllOY26 supports the main World Cup match markets:
+        </p>
+        <p>
+          Match Odds; Over/Under Goals; Correct Score; Half Time; First Half Goals;
+          Half Time Score; Extra Time; ET Over/Under Goals; ET Correct Score; Both
+          Teams to Score; Double Chance; Draw no Bet; Method of Victory; To Qualify;
+          Winner; To Lift The Trophy.
+        </p>
+        <p>
+          It currently does not support corners, cards, handicaps or player markets.
+        </p>
+      </details>
+
       <details>
         <summary>Why does Windows show a warning?</summary>
         <p>
@@ -322,5 +340,22 @@
     <p>AllOY26 — All Offline. All Yours.</p>
     <p>Built by Nuno Sousa • Contact: alloy26app@gmail.com</p>
   </footer>
+
+  <script>
+    function openAnchoredDetails() {
+      const targetId = window.location.hash.slice(1);
+      if (!targetId) return;
+
+      const target = document.getElementById(targetId);
+      if (target && target.tagName.toLowerCase() === "details") {
+        target.open = true;
+        const scrollTarget = target.closest(".faq") || target;
+        scrollTarget.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    }
+
+    window.addEventListener("DOMContentLoaded", openAnchoredDetails);
+    window.addEventListener("hashchange", openAnchoredDetails);
+  </script>
 </body>
 </html>

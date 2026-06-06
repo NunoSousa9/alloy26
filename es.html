@@ -93,7 +93,9 @@
         <article>
           <h3>Importación de CSVs Betfair</h3>
           <p>
-            Importa apuestas resueltas o historial de apuestas de Betfair y valida los datos contra el calendario del Mundial dentro de la aplicación. Probado con +30k apuestas y +2k mercados en los 104 partidos.
+            Importa apuestas resueltas o historial de apuestas de Betfair. Probado
+            con +30k apuestas y +2k mercados en los 104 partidos. Soporta los
+            principales mercados de partido. <a href="#supported-markets">Ver FAQ</a>
           </p>
         </article>
 
@@ -262,6 +264,23 @@
         </p>
       </details>
 
+      <details id="supported-markets">
+        <summary>¿Qué mercados de Betfair son soportados?</summary>
+        <p>
+          AllOY26 soporta los principales mercados de partido del Mundial. Lista
+          usando los nombres ingleses de Betfair:
+        </p>
+        <p>
+          Match Odds; Over/Under Goals; Correct Score; Half Time; First Half Goals;
+          Half Time Score; Extra Time; ET Over/Under Goals; ET Correct Score; Both
+          Teams to Score; Double Chance; Draw no Bet; Method of Victory; To Qualify;
+          Winner; To Lift The Trophy.
+        </p>
+        <p>
+          Actualmente no soporta mercados de córners, tarjetas, handicaps o jugadores.
+        </p>
+      </details>
+
       <details>
         <summary>¿Por qué Windows muestra un aviso?</summary>
         <p>
@@ -325,5 +344,22 @@
     <p>AllOY26 — All Offline. All Yours.</p>
     <p>Creado por Nuno Sousa • Contacto: alloy26app@gmail.com</p>
   </footer>
+
+  <script>
+    function openAnchoredDetails() {
+      const targetId = window.location.hash.slice(1);
+      if (!targetId) return;
+
+      const target = document.getElementById(targetId);
+      if (target && target.tagName.toLowerCase() === "details") {
+        target.open = true;
+        const scrollTarget = target.closest(".faq") || target;
+        scrollTarget.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    }
+
+    window.addEventListener("DOMContentLoaded", openAnchoredDetails);
+    window.addEventListener("hashchange", openAnchoredDetails);
+  </script>
 </body>
 </html>
