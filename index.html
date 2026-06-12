@@ -24,6 +24,7 @@
     <nav>
       <a href="#features">Funcionalidades</a>
       <a href="#screenshots">Screenshots</a>
+      <a href="#guides">Guias</a>
       <a href="#about">Sobre</a>
       <a href="#faq">FAQ</a>
       <a href="#download">Versão</a>
@@ -192,6 +193,68 @@
             </figcaption>
           </a>
         </div>
+      </div>
+    </section>
+
+    <section id="guides" class="section guides">
+      <h2>Guias</h2>
+
+      <p class="section-intro">
+        Demonstrações visuais das principais ferramentas do AllOY26. Os vídeos
+        só são carregados quando escolhes reproduzi-los.
+      </p>
+
+      <div class="guide-list">
+        <details class="guide-card">
+          <summary>
+            <span>
+              <strong>Descobre onde o teu resultado acontece</strong>
+              <small>Intervalos de odds · 1:30</small>
+            </span>
+            <span class="guide-summary-action">Ver guia</span>
+          </summary>
+
+          <div class="guide-content">
+            <div class="guide-copy">
+              <p>
+                Os breakpoints definem os limites usados para agrupar as odds.
+                Entre dois breakpoints é criado um novo intervalo.
+              </p>
+
+              <p>
+                Cada barra representa o Lucro/Perda total do intervalo. A altura
+                da linha tracejada em cada intervalo representa o número de apostas
+                realizadas nesse intervalo.
+              </p>
+
+              <div class="guide-reading">
+                <p>
+                  <strong>Barras · P/L</strong>
+                  <span>Leitura no eixo esquerdo.</span>
+                </p>
+                <p>
+                  <strong>Linhas tracejadas · Volume</strong>
+                  <span>Leitura no eixo direito.</span>
+                </p>
+              </div>
+
+              <p class="guide-tip">
+                Ativa Back/Lay para separar apostas a favor/contra e adiciona breakpoints
+                para analisar com maior detalhe os intervalos de odds relevantes.
+              </p>
+            </div>
+
+            <div class="guide-video-shell" data-youtube-id="0q15yprqXrE">
+              <button class="guide-video-trigger" type="button" aria-label="Reproduzir guia de intervalos de odds">
+                <img src="assets/guide-odds-range.png" alt="Gráfico de intervalos de odds do AllOY26">
+                <span class="guide-play">
+                  <span class="guide-play-icon" aria-hidden="true">▶</span>
+                  Ver demonstração
+                </span>
+              </button>
+            </div>
+          </div>
+        </details>
       </div>
     </section>
 
@@ -372,6 +435,23 @@
 
     window.addEventListener("DOMContentLoaded", openAnchoredDetails);
     window.addEventListener("hashchange", openAnchoredDetails);
+
+    document.querySelectorAll(".guide-video-trigger").forEach((trigger) => {
+      trigger.addEventListener("click", () => {
+        const shell = trigger.closest(".guide-video-shell");
+        const videoId = shell?.dataset.youtubeId;
+        if (!shell || !videoId) return;
+
+        const iframe = document.createElement("iframe");
+        iframe.src = `https://www.youtube-nocookie.com/embed/${videoId}?autoplay=1&rel=0`;
+        iframe.title = "Guia AllOY26: intervalos de odds";
+        iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
+        iframe.allowFullscreen = true;
+        iframe.referrerPolicy = "strict-origin-when-cross-origin";
+
+        shell.replaceChildren(iframe);
+      }, { once: true });
+    });
   </script>
 </body>
 </html>

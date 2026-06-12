@@ -24,6 +24,7 @@
     <nav>
       <a href="#features">Funcionalidades</a>
       <a href="#screenshots">Screenshots</a>
+      <a href="#guides">Guías</a>
       <a href="#about">Sobre</a>
       <a href="#faq">FAQ</a>
       <a href="#download">Versión</a>
@@ -192,6 +193,68 @@
             </figcaption>
           </a>
         </div>
+      </div>
+    </section>
+
+    <section id="guides" class="section guides">
+      <h2>Guías</h2>
+
+      <p class="section-intro">
+        Demostraciones visuales de las principales herramientas de AllOY26.
+        Los vídeos solo se cargan cuando eliges reproducirlos.
+      </p>
+
+      <div class="guide-list">
+        <details class="guide-card">
+          <summary>
+            <span>
+              <strong>Descubre dónde se produce tu resultado</strong>
+              <small>Intervalos de cuotas · 1:30</small>
+            </span>
+            <span class="guide-summary-action">Ver guía</span>
+          </summary>
+
+          <div class="guide-content">
+            <div class="guide-copy">
+              <p>
+                Los breakpoints definen los límites utilizados para agrupar las cuotas.
+                Entre dos breakpoints se crea un nuevo intervalo.
+              </p>
+
+              <p>
+                Cada barra representa la Ganancia/Pérdida total del intervalo. La altura
+                de la línea discontinua en cada intervalo representa el número de apuestas
+                realizadas en ese intervalo.
+              </p>
+
+              <div class="guide-reading">
+                <p>
+                  <strong>Barras · P/L</strong>
+                  <span>Lectura en el eje izquierdo.</span>
+                </p>
+                <p>
+                  <strong>Líneas discontinuas · Volumen</strong>
+                  <span>Lectura en el eje derecho.</span>
+                </p>
+              </div>
+
+              <p class="guide-tip">
+                Activa Back/Lay para separar apuestas a favor y en contra, y añade
+                breakpoints para analizar con mayor detalle los intervalos de cuotas relevantes.
+              </p>
+            </div>
+
+            <div class="guide-video-shell" data-youtube-id="0q15yprqXrE">
+              <button class="guide-video-trigger" type="button" aria-label="Reproducir guía de intervalos de cuotas">
+                <img src="assets/guide-odds-range.png" alt="Gráfico de intervalos de cuotas de AllOY26">
+                <span class="guide-play">
+                  <span class="guide-play-icon" aria-hidden="true">▶</span>
+                  Ver demostración
+                </span>
+              </button>
+            </div>
+          </div>
+        </details>
       </div>
     </section>
 
@@ -372,6 +435,23 @@
 
     window.addEventListener("DOMContentLoaded", openAnchoredDetails);
     window.addEventListener("hashchange", openAnchoredDetails);
+
+    document.querySelectorAll(".guide-video-trigger").forEach((trigger) => {
+      trigger.addEventListener("click", () => {
+        const shell = trigger.closest(".guide-video-shell");
+        const videoId = shell?.dataset.youtubeId;
+        if (!shell || !videoId) return;
+
+        const iframe = document.createElement("iframe");
+        iframe.src = `https://www.youtube-nocookie.com/embed/${videoId}?autoplay=1&rel=0`;
+        iframe.title = "Guía AllOY26: intervalos de cuotas";
+        iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
+        iframe.allowFullscreen = true;
+        iframe.referrerPolicy = "strict-origin-when-cross-origin";
+
+        shell.replaceChildren(iframe);
+      }, { once: true });
+    });
   </script>
 </body>
 </html>
